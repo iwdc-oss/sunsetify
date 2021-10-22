@@ -1,0 +1,11 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "editor.suggest.preview": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true
+}
