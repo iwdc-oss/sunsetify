@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FormCalc } from '@/src/components/FormCalc'
 import { useSelector } from 'react-redux'
+import { InboxInIcon } from '@heroicons/react/outline'
 
 export default function Home() {
   const gradePoint = useSelector((state) => state.calculation.gradePoint)
   return (
-    <div className='py-10'>
+    <div className='py-10 px-3'>
       <div className='mb-12'>
         <h1 className='text-center text-6xl font-poppins'>Sunsetify</h1>
         <h2 className='mt-4 text-center text-lg font-poppins'>
@@ -27,6 +28,13 @@ export default function Home() {
         </div>
       </div>
       <FormCalc />
+      {/* Footer */}
+      <div className='my-12'>
+        <h1 className='text-center'>
+          Saran & Masukkan : <InboxInIcon className='w-6 h-6 inline-block text-gray-600 mx-2' />
+          agriwebcsipb@gmail.com
+        </h1>
+      </div>
     </div>
   )
 }
