@@ -12,7 +12,9 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "@heroicons/react": "^1.0.5",
         "@reduxjs/toolkit": "^1.6.2",
+        "@tailwindcss/forms": "^0.3.4",
         "formik": "^2.2.9",
         "next": "^11.1.2",
         "react": "17.0.2",
