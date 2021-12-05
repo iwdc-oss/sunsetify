@@ -34,7 +34,7 @@ export default function Home() {
       {/* Footer */}
       <div className='my-12'>
         <h1 className='text-center'>
-          Saran & Masukkan : <InboxInIcon className='w-6 h-6 inline-block text-gray-600 mx-2' />
+          Saran & Masukan : <InboxInIcon className='w-6 h-6 inline-block text-gray-600 mx-2' />
           agriwebcsipb@gmail.com
         </h1>
       </div>
