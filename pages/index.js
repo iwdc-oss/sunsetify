@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FormCalc } from '@/src/components/FormCalc'
-import { GradeView } from '@/src/components/GradeView'
 import { useSelector } from 'react-redux'
 import { InboxInIcon } from '@heroicons/react/outline'
 
@@ -19,7 +18,9 @@ export default function Home() {
       </div>
       {/* Grade View */}
       <div>
-        <GradeView gradePoint={gradePoint} />
+        <div className='flex justify-center items-center border-4 bg-gray-600 border-gray-300 rounded-full w-28 h-28 mx-auto'>
+          <h1 className='text-4xl font-poppins font-medium text-white'>{gradePoint}</h1>
+        </div>
       </div>
       {/* Header */}
       <div className='overflow-auto'>
