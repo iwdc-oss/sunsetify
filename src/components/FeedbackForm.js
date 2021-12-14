@@ -2,6 +2,17 @@ import React, { useEffect, useRef, useState } from 'react'
 import { FieldArray, Form, Formik, Field, ErrorMessage, useFormikContext } from 'formik'
 import * as Yup from 'yup'
 
+const feedbackSubmitHandler = async (data) => {
+  const response = await fetch('/api/sheet', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  console.log(await response.json())
+}
+
 export const FeedbackForm = () => {
   return (
     <Formik
@@ -12,10 +23,17 @@ export const FeedbackForm = () => {
         content: Yup.string().required('Feedback is required'),
       })}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
-          setSubmitting(false)
-        }, 400)
+        const datetime = new Date().toISOString()
+        const data = {
+          message: values.content,
+          datetime,
+        }
+        feedbackSubmitHandler(data)
+        setSubmitting(false)
+        // setTimeout(() => {
+        //   alert(JSON.stringify(values, null, 2))
+        //   setSubmitting(false)
+        // }, 400)
       }}
     >
       <Form className='w-full max-w-lg'>
