@@ -9,9 +9,7 @@ export default function Feedback() {
         <h2 className='text-center font-poppins italic mt-1'>
           <span className='font-bold'>from</span> <span className='underline'>IPB Web Development Community</span>
         </h2>
-        <h2 className='mt-6 text-center text-lg font-poppins'>
-          "Berapakah kadar <span className='text-yellow-600 font-medium'>Senja</span> Anda pada semester ini?"
-        </h2>
+        <h2 className='mt-6 text-center text-lg font-poppins'>We would like your feedback to improve our service.</h2>
       </div>
       <div
         className='overflow-auto'

@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable react/no-unescaped-entities */
 import { FormCalc } from '@/src/components/FormCalc'
 import { GradeView } from '@/src/components/GradeView'
 import { useSelector } from 'react-redux'
 import { InboxInIcon } from '@heroicons/react/outline'
+import { Link } from 'next/link'
 
 export default function Home() {
   const gradePoint = useSelector((state) => state.calculation.gradePoint)
@@ -33,8 +35,10 @@ export default function Home() {
       {/* Footer */}
       <div className='my-12'>
         <h1 className='text-center'>
-          Saran & Masukan : <InboxInIcon className='w-6 h-6 inline-block text-gray-600 mx-2' />
-          agriwebcsipb@gmail.com
+          <a href='/feedback'>
+            {'Saran & Masukan : '}
+            <InboxInIcon className='w-6 h-6 inline-block text-gray-600 mx-2' />
+          </a>
         </h1>
       </div>
     </div>

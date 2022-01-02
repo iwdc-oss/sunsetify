@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { FieldArray, Form, Formik, Field, ErrorMessage, useFormikContext } from 'formik'
 import * as Yup from 'yup'
 
@@ -30,10 +30,6 @@ export const FeedbackForm = () => {
         }
         feedbackSubmitHandler(data)
         setSubmitting(false)
-        // setTimeout(() => {
-        //   alert(JSON.stringify(values, null, 2))
-        //   setSubmitting(false)
-        // }, 400)
       }}
     >
       <Form className='w-full max-w-lg'>
@@ -42,11 +38,12 @@ export const FeedbackForm = () => {
           render={({ field }) => (
             <div className='mb-4'>
               <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='content'>
-                Feedback
+                Please leave your feedback here
               </label>
               <textarea
                 className='shadow appearance-none border rounded w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                 id='content'
+                rows='6'
                 {...field}
               />
               <ErrorMessage name='content' component='div' className='text-red-500 text-sm' />
