@@ -38,3 +38,6 @@ yarn-error.log*
 
 # secret markdown
 NOTES.md
+
+# Google Credentials
+auth-7f2d0-0907264325a7.json
