@@ -1,19 +1,23 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { FieldArray, Form, Formik, Field, ErrorMessage, useFormikContext } from 'formik'
 import * as Yup from 'yup'
 
-const feedbackSubmitHandler = async (data) => {
-  const response = await fetch('/api/sheet', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-  console.log(await response.json())
-}
-
 export const FeedbackForm = () => {
+  const router = useRouter()
+
+  const feedbackSubmitHandler = async (data) => {
+    const response = await fetch('/api/sheet', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    const res = await response.json()
+    if (res.response.status === 200) router.push('/')
+  }
+
   return (
     <Formik
       initialValues={{
