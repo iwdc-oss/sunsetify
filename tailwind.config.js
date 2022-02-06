@@ -9,6 +9,9 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         cairo: ['Cairo', 'sans-serif'],
       },
+      maxWidth: {
+        '32rem': '32rem',
+      }
     },
   },
   variants: {
